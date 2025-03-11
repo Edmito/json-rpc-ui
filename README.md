@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JSON-RPC UI
 
-## Getting Started
+Este projeto é uma interface de usuário para um serviço de pedidos utilizando JSON-RPC. Ele permite criar, consultar e listar pedidos.
 
-First, run the development server:
+## Funcionalidades
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Criar Pedido:** Permite criar um novo pedido fornecendo o ID do cliente, item e quantidade.
+- **Consultar Pedido:** Permite consultar um pedido existente fornecendo o ID do pedido.
+- **Listar Pedidos:** Permite listar todos os pedidos existentes.
+
+## Tecnologias Utilizadas
+
+- **React:** Biblioteca JavaScript para construção de interfaces de usuário.
+- **TypeScript:** Superset de JavaScript que adiciona tipagem estática ao código.
+- **Zod:** Biblioteca de validação de esquemas.
+- **React Hook Form:** Biblioteca para gerenciamento de formulários em React.
+- **Shadcn:** Conjunto de componentes de UI.
+- **Sonner:** Biblioteca para exibição de toasts.
+- **Tailwind CSS:** Framework de CSS para estilização.
+
+## Instalação
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/Edmito/JsonRpcUI.git
+   ```
+
+2. Navegue até o diretório do projeto:
+
+   ```bash
+   cd /json-rpc-ui
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+4. Atualize o endpoint do serviço de pedidos:
+
+Localize a linha de código:
+
+```javascript
+const res = await fetch('http://localhost:5186/rpc', {
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Em seguida, substitua o endereço 'http://localhost:5186/rpc' pelo endereço do servidor onde está rodando o serviço de pedidos. Por exemplo:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```javascript
+const res = await fetch('http://SEU_ENDERECO_DO_SERVIDOR/rpc', {
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Certifique-se de que o novo URL corresponda ao endereço correto do ambiente em que o serviço está implantado.
 
-## Learn More
+## Uso
 
-To learn more about Next.js, take a look at the following resources:
+1. Inicie o servidor de desenvolvimento:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Abra o navegador e acesse:
 
-## Deploy on Vercel
+   ```
+   http://localhost:3000
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Estrutura do Projeto
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **app/page.tsx:** Componente principal da aplicação.
+- **components/ui:** Componentes de UI reutilizáveis.
+
+## Contribuição
+
+1. Faça um fork do projeto.
+2. Crie uma nova branch:
+
+   ```bash
+   git checkout -b minha-nova-feature
+   ```
+
+3. Faça as alterações desejadas e commit:
+
+   ```bash
+   git commit -m 'Adiciona nova feature'
+   ```
+
+4. Envie para o repositório remoto:
+
+   ```bash
+   git push origin minha-nova-feature
+   ```
+
+5. Abra um Pull Request.

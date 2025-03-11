@@ -23,7 +23,7 @@ Este projeto é uma interface de usuário para um serviço de pedidos utilizando
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/Edmito/JsonRpcUI.git
+   git clone https://github.com/Edmito/json-rpc-ui.git
    ```
 
 2. Navegue até o diretório do projeto:
